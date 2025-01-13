@@ -1,8 +1,19 @@
+import { ScrollText } from 'lucide-react'
+
 const Publications = () => {
   const peerReviewed = [
-    'T. Matsumoto, T. Miura, T. Shibahara, M. Kii, K. Iwahana, O. Saisho and S. Okamura, “Differentially Private Sequential Data Synthesis with Structured State Space Models and Diffusion Models,” NeurIPS Safe Generative AI Workshop 2024.',
-    'Y. Goto, T. Matsumoto, H. Rizk, N. Yanai and H. Yamaguchi, “Privacy-Preserving Taxi-Demand Prediction Using Federated Learning,” 2023 IEEE International Conference on Smart Computing (SMARTCOMP), Nashville, TN, USA, 2023, pp. 297-302.',
-    'T. Matsumoto, T. Miura and N. Yanai, “Membership Inference Attacks against Diffusion Models,” 2023 IEEE Security and Privacy Workshops (SPW), San Francisco, CA, USA, 2023, pp. 77-83.',
+    {
+      text: 'T. Matsumoto, T. Miura, T. Shibahara, M. Kii, K. Iwahana, O. Saisho and S. Okamura, "Differentially Private Sequential Data Synthesis with Structured State Space Models and Diffusion Models," NeurIPS Safe Generative AI Workshop 2024.',
+      paperUrl: 'https://openreview.net/forum?id=ntsBXjkjm7',
+    },
+    {
+      text: 'Y. Goto, T. Matsumoto, H. Rizk, N. Yanai and H. Yamaguchi, "Privacy-Preserving Taxi-Demand Prediction Using Federated Learning," 2023 IEEE International Conference on Smart Computing (SMARTCOMP), Nashville, TN, USA, 2023, pp. 297-302.',
+      paperUrl: 'https://ieeexplore.ieee.org/abstract/document/10207615',
+    },
+    {
+      text: 'T. Matsumoto, T. Miura and N. Yanai, "Membership Inference Attacks against Diffusion Models," 2023 IEEE Security and Privacy Workshops (SPW), San Francisco, CA, USA, 2023, pp. 77-83.',
+      paperUrl: 'https://ieeexplore.ieee.org/abstract/document/10188618',
+    },
   ]
 
   const nonPeerReviewed = [
@@ -17,17 +28,30 @@ const Publications = () => {
       <div className="space-y-8">
         <div>
           <h3 className="text-2xl font-semibold mb-4">Peer-reviewed</h3>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="space-y-2">
             {peerReviewed.map((pub, index) => (
-              <li key={index}>{pub}</li>
+              <li key={index} className="flex items-start gap-2">
+                <ScrollText className="h-5 w-5 flex-shrink-0 mt-1" />
+                <span>
+                  {pub.text}
+                  {pub.paperUrl && (
+                    <span className="ml-2">
+                      <a href={pub.paperUrl} className="text-[#DDA853] hover:underline" target="_blank" rel="noopener noreferrer">[paper]</a>
+                    </span>
+                  )}
+                </span>
+              </li>
             ))}
           </ul>
         </div>
         <div>
           <h3 className="text-2xl font-semibold mb-4">Non peer-reviewed</h3>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="space-y-2">
             {nonPeerReviewed.map((pub, index) => (
-              <li key={index}>{pub}</li>
+              <li key={index} className="flex items-start gap-2">
+                <ScrollText className="h-5 w-5 flex-shrink-0 mt-1" />
+                <span>{pub}</span>
+              </li>
             ))}
           </ul>
         </div>

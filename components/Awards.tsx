@@ -1,3 +1,5 @@
+import { Trophy } from 'lucide-react'
+
 const Awards = () => {
   const awards = [
     'PWSCUP2024 ベストデータサイエンティスト賞 (Team HAL), 2024年10月.',
@@ -10,9 +12,12 @@ const Awards = () => {
     <section id="awards" className="py-16">
       <h2 className="text-3xl font-bold mb-8">Awards</h2>
       <div className="space-y-8">
-        <ul className="list-disc pl-6 space-y-2">
-          {awards.map((pub, index) => (
-            <li key={index}>{pub}</li>
+        <ul className="space-y-2">
+          {awards.map((award, index) => (
+            <li key={index} className="flex items-start gap-2">
+              <Trophy className="h-5 w-5 flex-shrink-0 mt-1" />
+              <span>{award}</span>
+            </li>
           ))}
         </ul>
       </div>
