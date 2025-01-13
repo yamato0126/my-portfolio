@@ -7,7 +7,7 @@ const About = () => {
       <div className="flex flex-col md:flex-row items-center gap-8">
         <div className="w-48 h-48 relative">
           <Image
-            src="https://github.com/yamato0126/my-portfolio/blob/main/images/chicken-icon.webp"
+            src="https://raw.githubusercontent.com/yamato0126/my-portfolio/refs/heads/main/images/chicken-icon.webp"
             alt="Tomoya Matsumoto"
             width={192}
             height={192}
