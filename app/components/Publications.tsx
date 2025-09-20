@@ -1,18 +1,18 @@
-import { ScrollText } from 'lucide-react'
+import { GraduationCap } from 'lucide-react'
 
 const Publications = () => {
   const peerReviewed = [
     {
       text: 'T. Matsumoto, T. Miura, T. Shibahara, M. Kii, K. Iwahana, O. Saisho and S. Okamura, "Differentially Private Sequential Data Synthesis with Structured State Space Models and Diffusion Models," NeurIPS Safe Generative AI Workshop 2024.',
-      paperUrl: 'https://openreview.net/forum?id=ntsBXjkjm7',
+      paperUrl: 'https://example.com/paper1',
     },
     {
       text: 'Y. Goto, T. Matsumoto, H. Rizk, N. Yanai and H. Yamaguchi, "Privacy-Preserving Taxi-Demand Prediction Using Federated Learning," 2023 IEEE International Conference on Smart Computing (SMARTCOMP), Nashville, TN, USA, 2023, pp. 297-302.',
-      paperUrl: 'https://ieeexplore.ieee.org/abstract/document/10207615',
+      paperUrl: 'https://example.com/paper2',
     },
     {
       text: 'T. Matsumoto, T. Miura and N. Yanai, "Membership Inference Attacks against Diffusion Models," 2023 IEEE Security and Privacy Workshops (SPW), San Francisco, CA, USA, 2023, pp. 77-83.',
-      paperUrl: 'https://ieeexplore.ieee.org/abstract/document/10188618',
+      paperUrl: 'https://example.com/paper3',
     },
   ]
 
@@ -31,7 +31,7 @@ const Publications = () => {
           <ul className="space-y-2">
             {peerReviewed.map((pub, index) => (
               <li key={index} className="flex items-start gap-2">
-                <ScrollText className="h-5 w-5 flex-shrink-0 mt-1" />
+                <GraduationCap className="h-5 w-5 flex-shrink-0 mt-1" />
                 <span>
                   {pub.text}
                   {pub.paperUrl && (
@@ -49,7 +49,7 @@ const Publications = () => {
           <ul className="space-y-2">
             {nonPeerReviewed.map((pub, index) => (
               <li key={index} className="flex items-start gap-2">
-                <ScrollText className="h-5 w-5 flex-shrink-0 mt-1" />
+                <GraduationCap className="h-5 w-5 flex-shrink-0 mt-1" />
                 <span>{pub}</span>
               </li>
             ))}
@@ -61,4 +61,3 @@ const Publications = () => {
 }
 
 export default Publications
-

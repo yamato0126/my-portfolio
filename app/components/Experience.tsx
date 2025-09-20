@@ -1,14 +1,19 @@
 const Experience = () => {
   const experiences = [
     {
-      title: 'Osaka University',
-      company: 'Master student',
-      date: 'Apr 2023 - Present',
+      title: 'Research Engineer',
+      company: 'LY Corporation',
+      date: 'Apr 2025 - Present',
+    },
+    {
+      title: "Master's Degree",
+      company: 'Osaka University',
+      date: 'Apr 2023 - Mar 2025',
       description: 'Graduate School of Information Science and Technology',
     },
     {
-      title: 'Osaka University',
-      company: "Bachelor's Degree",
+      title: "Bachelor's Degree",
+      company: 'Osaka University',
       date: 'Apr 2019 - Mar 2023',
       description: 'School of Engineering Science',
     },
@@ -33,4 +38,3 @@ const Experience = () => {
 }
 
 export default Experience
-

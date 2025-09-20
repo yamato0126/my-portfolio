@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import imageAsset from '../images/chicken-icon.webp'
 import { Github, Linkedin, Twitter } from 'lucide-react'
 
 const About = () => {
@@ -8,7 +7,7 @@ const About = () => {
       <div className="flex flex-col md:flex-row items-center gap-8">
         <div className="w-48 h-48 relative">
           <Image
-            src={imageAsset}
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/chicken_icon%281%29-5SWqDEvU356pPowvjTCWHYZk4oQ47t.webp"
             alt="Tomoya Matsumoto"
             width={192}
             height={192}
@@ -18,8 +17,8 @@ const About = () => {
         <div className="flex-1">
           <h2 className="text-3xl font-bold mb-4">About Me</h2>
           <p className="text-lg mb-4">
-            I am a student in Graduate School of Information Science and Technology, Osaka University, Japan.
-            My research focuses on machine learning security and data privacy.
+            I am a research engineer at LY Corporation, Japan.
+            My interest focuses on data privacy and machine learning security.
           </p>
           <div className="flex space-x-4">
             <a href="https://github.com/yamato0126" target="_blank" rel="noopener noreferrer" className="text-[#16404D] hover:text-[#DDA853]">
@@ -39,4 +38,3 @@ const About = () => {
 }
 
 export default About
-
